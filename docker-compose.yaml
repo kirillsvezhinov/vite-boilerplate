@@ -1,0 +1,11 @@
+# docker-compose.prod.yml
+version: '3.6'
+
+services:
+  client:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    restart: unless-stopped
